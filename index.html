@@ -14,12 +14,14 @@
   <body>
     <!--creating bootstrap container-->
     <div class="container">
-      <h1 class="display-1 text-center text-primary">Bootstrap - form</h1>
+      <h1 class="display-1 text-center text-primary">Bootstrap Form</h1>
       <form action="#nowhere">
-        <!--bootstrap grid - row -col -->
+        <!--bootstrap grid - row -col - total space col = 12units -->
+        <!--NEW ROW-->
         <div class="row">
-            <!--form group + form-control-->
-          <div class="col form-group">
+          <!--form group + form-control-->
+          <!--space restraint only at medium up-->
+          <div class="col-md-6 form-group">
             <label for="email">Email:</label>
             <input
               type="email"
@@ -40,25 +42,61 @@
             />
           </div>
         </div>
+        <!--ROW CLOSED-->
 
-        <!--form-group + form-control -->
+        <!-- OUTSIDE ROW - form group + form-control-->
         <div class="form-group">
-          <label for="select">State:</label>
-          <select class="form-control" id="select" name="select">
-            <option value="AL">Alabama</option>
-            <option value="ALK">Alaska</option>
-          </select>
+          <label for="address">Address:</label>
+          <input type="text" class="form-control" id="address" placeholder="" />
         </div>
-        <!--form-check + form-check-input + form-check-label-->
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            name="check"
-            id="check"
-          />
-          <label class="form-check-label" for="check">Option One</label>
+
+        <!--NEW ROW-->
+        <div class="row">
+          <!-- INSIDE NEW ROW - form group + form-control-->
+          <!--space restraint only at medium up-->
+          <div class="form-group col-md-6">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" placeholder="" />
+          </div>
+
+          <!--INSIDE NEW ROW - (select) form-group + form-control -->
+          <!--space restraint before is med col-6 ,after is col-3-->
+          <div class="form-group col-md-3 col-6">
+            <label for="state">State:</label>
+            <select class="form-control" id="state" name="state">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+            </select>
+          </div>
+
+          <!-- INSIDE NEW ROW - form group + form-control-->
+          <!--space restraint before is med col-6 ,after is col-3-->
+          <div class="form-group col-md-3 col-6">
+            <label for="zip">Zip:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="zip"
+              placeholder="1234"
+            />
+          </div>
         </div>
+        <!--ROW CLOSED-->
+
+        <!--OUTSIDE ROW -form-group + form-check + form-check-input + form-check-label-->
+        <div class="form-group">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="check"
+              id="check"
+            />
+            <label class="form-check-label" for="check">Option One</label>
+          </div>
+        </div>
+        <!--Button-->
+        <button type="submit" class="btn btn-success">Register</button>
       </form>
     </div>
 
